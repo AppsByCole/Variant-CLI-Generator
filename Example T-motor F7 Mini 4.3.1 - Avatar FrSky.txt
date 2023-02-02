@@ -1,0 +1,147 @@
+defaults nosave
+
+board_name TMOTORF7
+manufacturer_id TMTR
+mcu_id 001e00233756501320393558
+signature 
+
+# name: Example Avatar FrSky
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 2 1 115200 57600 0 115200
+
+# beacon
+beacon RX_SET
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 13 3 1700 2100 0 0
+aux 3 35 2 1700 2100 0 0
+
+# master
+set dyn_notch_count = 2
+set dyn_notch_min_hz = 100
+set dyn_notch_max_hz = 650
+set acc_calibration = -29,-19,23,1
+set mag_hardware = NONE
+set baro_hardware = NONE
+set min_check = 1020
+set rc_smoothing_auto_factor = 35
+set rc_smoothing_auto_factor_throttle = 28
+set rc_smoothing_setpoint_cutoff = 12
+set rc_smoothing_feedforward_cutoff = 12
+set rc_smoothing_throttle_cutoff = 20
+set serialrx_provider = SBUS
+set blackbox_sample_rate = 1/2
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_output_reordering = 2,0,3,1,4,5,6,7
+set yaw_motors_reversed = ON
+set small_angle = 180
+set deadband = 2
+set osd_vbat_pos = 2048
+set osd_craft_name_pos = 2539
+set osd_avg_cell_voltage_pos = 2080
+set osd_displayport_device = MSP
+set debug_mode = GYRO_SCALED
+set displayport_msp_serial = 2
+set name = Example Avatar FrSky
+
+profile 0
+
+# profile 0
+set anti_gravity_gain = 8000
+set iterm_relax_cutoff = 10
+set p_pitch = 78
+set i_pitch = 134
+set d_pitch = 70
+set f_pitch = 167
+set p_roll = 71
+set i_roll = 121
+set d_roll = 62
+set f_roll = 153
+set p_yaw = 71
+set i_yaw = 121
+set f_yaw = 153
+set d_min_roll = 62
+set d_min_pitch = 70
+set auto_profile_cell_count = 4
+set feedforward_smooth_factor = 20
+set feedforward_jitter_factor = 15
+set feedforward_boost = 5
+set dyn_idle_min_rpm = 35
+set simplified_master_multiplier = 160
+set simplified_i_gain = 95
+set simplified_d_gain = 130
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 80
+set simplified_pitch_pi_gain = 105
+
+profile 1
+
+# profile 1
+set anti_gravity_gain = 8000
+set iterm_relax_cutoff = 10
+set p_pitch = 78
+set i_pitch = 134
+set d_pitch = 70
+set f_pitch = 167
+set p_roll = 71
+set i_roll = 121
+set d_roll = 62
+set f_roll = 153
+set p_yaw = 71
+set i_yaw = 121
+set f_yaw = 153
+set d_min_roll = 62
+set d_min_pitch = 70
+set motor_output_limit = 69
+set auto_profile_cell_count = 6
+set feedforward_smooth_factor = 20
+set feedforward_jitter_factor = 15
+set feedforward_boost = 5
+set dyn_idle_min_rpm = 35
+set simplified_master_multiplier = 160
+set simplified_i_gain = 95
+set simplified_d_gain = 130
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 80
+set simplified_pitch_pi_gain = 105
+
+profile 2
+
+# restore original profile selection
+profile 1
+
+rateprofile 0
+
+# rateprofile 0
+set roll_expo = 10
+set pitch_expo = 1
+set yaw_expo = 1
+set roll_srate = 49
+set pitch_srate = 49
+set yaw_srate = 49
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
